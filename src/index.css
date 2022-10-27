@@ -1,8 +1,14 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +16,116 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* main styles */
+.app {
+  min-height: 100vh;;
+  background: #223;
+  color: #fff;
+}
+.app__wrapper {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.app__inputs-box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.app__header {
+  margin-bottom: 30px;
+}
+
+/* form styles */
+.form {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+.form__control {
+  flex: 1;
+}
+.form__input {
+  display: block;
+  width: 100%;
+  height: 35px;
+  padding: 7px;
+  border-radius: 5px;
+  border: 0;
+  outline: transparent;
+  color: #222;
+  font-size: 16px;
+}
+.form__btn {
+  width: 80px;
+  height: 35px;
+  border-radius: 5px;
+  border: 0;
+  background: rgb(63, 78, 240);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .3s ease-out;
+}
+.form__btn:hover {
+  background: rgb(85, 99, 254);
+}
+.form__error-text {
+  margin-top: 5px;
+  color: rgb(239, 49, 49);
+}
+
+/* filter select styles */
+.filter-todo {
+  align-self: stretch;
+  width: 110px;
+  height: 35px;
+  border-radius: 5px;
+  outline: transparent;
+  border: 0;
+}
+
+/* todos styles */
+.todo-list {
+  margin-top: 50px;
+  list-style: none;
+}
+.todo-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 25px 20px;
+  border-radius: 5px;
+  background: hsl(240, 20%, 27%);
+  transition: background .3s ease-out;
+}
+.todo-list__item:hover {
+  background: hsl(240, 20%, 37%);
+}
+.todo-list__label {
+  display: flex;
+  align-items: center;
+}
+.todo-list__checkbox {
+  margin-right: 5px;
+  height: 15px;
+  width: 15px;
+}
+.todo-list__btn {
+  border: 0;
+  background: transparent;
+  outline: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+.todo-list__edit-btn {
+  color: rgb(239, 172, 48);
+  margin-right: 10px;
+}
+.todo-list__delete-btn {
+  color: rgb(203, 19, 19);
 }
