@@ -12,8 +12,8 @@ const AddTodo = () => {
     e.preventDefault();
     if (task.trim().length < 5) {
       setError("Minimum allowed task length is 5");
-    } else if (task.trim().length > 30) {
-      setError("Maximum allowed task length is 30");
+    } else if (task.trim().length > 50) {
+      setError("Maximum allowed task length is 50");
     } else {
       dispatch(addTodo({ task, id: uuidv4(), completed: false }));
       setTask("");
@@ -22,7 +22,7 @@ const AddTodo = () => {
 
   const handleUpdateTodoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTask(e.target.value);
-    if (task.trim().length > 5 && task.trim().length < 30) {
+    if (task.trim().length > 5 && task.trim().length < 50) {
       setError("");
     }
   };
